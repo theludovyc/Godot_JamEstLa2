@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Outdoor_Ambiance-converted.ogg-389d30dce6d99ccbfe12e960f661a3e3.oggstr"
+
+[deps]
+
+source_file="res://Sound/Outdoor_Ambiance-converted.ogg"
+dest_files=[ "res://.import/Outdoor_Ambiance-converted.ogg-389d30dce6d99ccbfe12e960f661a3e3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

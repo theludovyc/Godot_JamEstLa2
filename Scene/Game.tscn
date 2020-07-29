@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sound/Cleyton RX - Underwater-converted.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Art/tile.png" type="Texture" id=2]
+[ext_resource path="res://Sound/Outdoor_Ambiance-converted.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sound/rain_thunder_loop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sound/swamp.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Art/lineLight14.png" type="Texture" id=6]
+[ext_resource path="res://Script/Game.gd" type="Script" id=7]
+
+[node name="Game" type="Node"]
+script = ExtResource( 7 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/vseparation = 5
+custom_constants/hseparation = 5
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button0" type="TextureButton" parent="GridContainer"]
+modulate = Color( 0.980392, 0.505882, 0.196078, 1 )
+margin_right = 48.0
+margin_bottom = 48.0
+disabled = true
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="TextureButton" parent="GridContainer"]
+modulate = Color( 0.533333, 0.878431, 0.376471, 1 )
+margin_left = 53.0
+margin_right = 101.0
+margin_bottom = 48.0
+disabled = true
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="TextureButton" parent="GridContainer"]
+modulate = Color( 0.207843, 0.729412, 0.952941, 1 )
+margin_top = 53.0
+margin_right = 48.0
+margin_bottom = 101.0
+disabled = true
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="TextureButton" parent="GridContainer"]
+modulate = Color( 1, 0.85098, 0.282353, 1 )
+margin_left = 53.0
+margin_top = 53.0
+margin_right = 101.0
+margin_bottom = 101.0
+disabled = true
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="TextureButton" parent="."]
+margin_left = 31.0
+margin_top = 111.0
+margin_right = 79.0
+margin_bottom = 159.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="ASP_0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -50.0
+
+[node name="ASP_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -50.0
+
+[node name="ASP_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -50.0
+
+[node name="ASP_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -50.0
+[connection signal="button_down" from="GridContainer/Button0" to="." method="_on_Button0_button_down"]
+[connection signal="button_down" from="GridContainer/Button1" to="." method="_on_Button1_button_down"]
+[connection signal="button_down" from="GridContainer/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="GridContainer/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="Start" to="." method="_on_Start_button_down"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

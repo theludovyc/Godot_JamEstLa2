@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rain_thunder_loop.ogg-a49031c60baf26820e0696e8c7ed6021.oggstr"
+
+[deps]
+
+source_file="res://Sound/rain_thunder_loop.ogg"
+dest_files=[ "res://.import/rain_thunder_loop.ogg-a49031c60baf26820e0696e8c7ed6021.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
